@@ -39,3 +39,4 @@ Exception Type:	UnicodeDecodeError
 Exception Value:	
 'ascii' codec can't decode byte 0xa3 in position 990: ordinal not in range(128)
     '''
+#git_test
