@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Authors{% endblock %}
+{% block content %}
+	<p><strong><font color="red">Before you delete one author, you should determine that there is a book written by the author.</font></strong></p>
+	<h2> {{ object_list|length }} Authors</h2>
+	<ul> 
+		{% for auth in object_list %}      
+			<li>
+			<td>{{ forloop.counter }} : </td>
+			<a href="/authordetail/{{ auth.Name }}/" title="see the details">{{ auth.Name }}</a>
+			
+			<td><button onclick="location.href='/deleteauthor/{{auth.Name}}/'"title="delete the author">delete</button></td>
+			
+			</li>  
+		{% endfor %}  
+	</ul>
+<button onclick="location.href='/addauthor/'" title="add an author">addauthor</button>
+{% endblock %}

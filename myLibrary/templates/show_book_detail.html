@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Book Details{% endblock %}
+{% block content %} 
+<p>You clicked the book named <strong>{{ book.Title }}</strong></p>    
+<p>The ISBN of the book is {{ book.ISBN }}</p>
+<p>The Title of the book is {{ book.Title }}</p>
+<p>The AutherID of the book is {{ authid }}</p>
+<p>The Publisher of the book is {{ book.Publisher }}</p>
+<p>The PublishDate of the book is {{ book.PublishDate|date:'Y-m-d' }}</p>
+<p>The Price of the book is {{ book.Price }}</p>
+<br>
+<p>The anthor information of the book : </p>
+<p>AuthorID : {{ auth.AuthorID }}</p>
+<p>Name : {{ auth.Name }}</p>
+<p>Age : {{ auth.Age }}</p>
+<p>Country : {{ auth.Country }}</p>
+{% endblock %}

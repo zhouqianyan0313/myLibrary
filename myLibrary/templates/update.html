@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Update Book{% endblock %}
+{% block content %}
+	<form method="post">
+		<p><font color='red'>(Author'ID is not allowed to change.)</font></p>
+		<p>Name of the author<input name="Name" type="text" value={{au.Name}}></p>
+		<p>Age of the author<input name="Age" type="text" value={{au.Age}}></p>
+		<p>Country of the author<input name="Country" type="text" value={{au.Country}}></p>
+		<p>Publosher of the book<input name="Publisher" type="text" value={{bk.Publisher}}></p>
+        <p>PublishDate of the book<input name="PublishDate" type="text" value={{bk.PublishDate|date:'Y-m-d'}}>Like "1995-03-13"</p>
+        <p>Price of the book<input name="Price" type="text" value={{bk.Price}}></p>
+		<p><input  type="submit" value="save"><input type="reset" value="clear"></p>
+	</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Before add a Book{% endblock %}
+{% block content %}
+<form method="post">
+    <p><strong><font color="red">Attention please!!!</font></strong></p>
+<p><strong><font color="red">If the author you'll enter doesn't exist, you need to</p>
+<p> add the author first to prevent unexpected error.</font></strong></p>
+<p><a href="/addbook/">Do you want to continue if you have entered an exsisting author?</a></p>
+<a href="/addauthor/">Or add an author first?</a>
+</form>
+{% endblock %}

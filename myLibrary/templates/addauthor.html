@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Add an Author{% endblock %}
+{% block content %}
+<form method="post">
+<p><strong>Input the information of the author.</strong></p>
+<p>AuthorID<input name="AuthorID" type="text">(Unique)</p>
+<p>Name<input name="Name" type="text">(English name no more than 20 characters)</p>
+<p>Age<input name="Age" type=" text"></p>
+<p>Country<input name="Country" type=" text"></p>
+<p><input type="submit" value="save" onclick="location.href='/addbook/'">
+<input type="reset" value="clear"></p>
+</form>
+<p><button onclick="location.href='/addbook/'">turn to add a book</button></p>
+{% endblock %}

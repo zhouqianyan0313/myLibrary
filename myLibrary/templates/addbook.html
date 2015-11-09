@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Add a Book{% endblock %}
+{% block content %}
+<form method="post">
+<p><strong>Input the information of the book.</strong></p>
+<p>ISBN<input name="ISBN" type="text">(Be diffent)</p>
+<p>Title<input name="Title" type="text">(English name)</p>
+<p>AuthorID
+<select name="AuthorID">
+  {% for au in auth %}
+      <option value={{ au.AuthorID }}>{{ au.AuthorID }} : {{ au.Name }}</option>
+  {% endfor %}
+</select>
+(Choose an existing author who hasn't had a book yet)</p>
+<p>Publisher<input name="Publisher" type=" text">(Like "zqy Publisher")</p>
+<p>PublishDate<input name="PublishDate" type=" text">(Like "1995-03-13")</p>
+<p>Price<input name="Price" type=" text">(Like "24.0")</p>
+<p><input type="submit" value="save">
+<input type="reset" value="clear"></p>
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Author Details{% endblock %}
+{% block content %} 
+<p>You clicked the author named <strong>{{ auth.Name }}</strong></p>    
+<p>The anthor information of the book : </p>
+<p>AuthorID : {{ auth.AuthorID }}</p>
+<p>Name : {{ auth.Name }}</p>
+<p>Age : {{ auth.Age }}</p>
+<p>Country : {{ auth.Country }}</p>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Books{% endblock %}
+{% block content %}
+	<h2>{{ object_list|length }} Books</h2>
+
+	<ul> 
+		{% for book in object_list %}      
+			<li>
+			<td>{{ forloop.counter }} : </td>
+			<a href="/bookdetail/{{ book.Title }}/" title="see the details">{{ book.Title }}</a>
+			
+			<td><button onclick="location.href='/deletebook/{{book.Title}}/'" title="delete the book">delete</button></td>
+
+  			<td><button onclick="location.href='/updatebook/{{book.Title}}/'" title="update the book">update</button></td>
+  			
+			</li>  
+		{% endfor %}  
+	</ul>
+	<td><button onclick="location.href='/beforeaddbook/'" title="add a book">addbook</button></td>
+	<td><button onclick="location.href='/search/'" title="search books according to the author name">searchbook</button></td>
+	
+{% endblock %}
